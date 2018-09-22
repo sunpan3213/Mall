@@ -4,8 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
+
+import com.mob.shop.OperationCallback;
+import com.mob.shop.ShopSDK;
+import com.mob.shop.datatype.entity.Product;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -64,7 +70,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        List<Long> ids = new ArrayList<>();
+        ids.add(206739455485300736L);
+        ids.add(206864872975507456L);
+        ShopSDK.getProducts(ids ,null,null,null, new OperationCallback<List<Product>>() {
 
+            @Override
+            public void onSuccess(List<Product> products) {
+                super.onSuccess(products);
+                Toast.makeText(MainActivity.this, products.get(0).getProductName() + "", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFailed(Throwable throwable) {
+                super.onFailed(throwable);
+                Toast.makeText(MainActivity.this, throwable.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void initListener() {

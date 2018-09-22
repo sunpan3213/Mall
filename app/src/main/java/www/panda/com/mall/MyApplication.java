@@ -10,5 +10,7 @@ public class MyApplication extends Application {
         super.onCreate();
 
         MobSDK.init(this);
+
+        MobSDK.setUser("1","panda","phone",null);
     }
 }
