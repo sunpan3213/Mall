@@ -1,10 +1,11 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
 
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "www.panda.com.mall"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -16,6 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+}
+
+MobSDK {
+    appKey "moba6b6c6d6"
+    appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
+
+    // 若使用ShopSDK内置的支付方式，需同时引入PaySDK；若使用开发者自有的支付方式，则不需要PaySDK
+    ShopSDK {}
 }
 
 dependencies {
@@ -31,7 +40,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.x.x'
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     implementation 'com.android.support:recyclerview-v7:28.0.0-rc02'
     implementation 'com.google.code.gson:gson:2.8.5'
 }
