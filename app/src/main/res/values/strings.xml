@@ -11,4 +11,5 @@
     <string name="eight">体育用品</string>
     <string name="nine">数码产品</string>
     <string name="ten">厨房用品</string>
+    <string name="empty">没有数据，请稍后再试...</string>
 </resources>

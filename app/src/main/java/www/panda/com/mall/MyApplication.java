@@ -2,15 +2,13 @@ package www.panda.com.mall;
 
 import android.app.Application;
 
-import com.mob.MobSDK;
-
 public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
 
-        MobSDK.init(this);
+        //MobSDK.init(this);
 
-        MobSDK.setUser("1","panda","phone",null);
+        //MobSDK.setUser("1","panda","phone",null);
     }
 }

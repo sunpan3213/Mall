@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.mob.sdk'
+//apply plugin: 'com.mob.sdk'
 
 android {
     compileSdkVersion 28
@@ -19,13 +19,13 @@ android {
     }
 }
 
-MobSDK {
-    appKey "245c9fa3ec01c"
-    appSecret "8ed4b3bcf7c395d41edf44a5aeb561b3"
+//MobSDK {
+    //appKey "245c9fa3ec01c"
+    //appSecret "8ed4b3bcf7c395d41edf44a5aeb561b3"
 
     // 若使用ShopSDK内置的支付方式，需同时引入PaySDK；若使用开发者自有的支付方式，则不需要PaySDK
-    ShopSDK {}
-}
+    //ShopSDK {}
+//}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')

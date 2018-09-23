@@ -1,22 +1,29 @@
 package www.panda.com.mall.entity;
 
-import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.mob.shop.datatype.entity.Product;
+public class MyProduct {
 
-public class MyProduct extends Product implements MultiItemEntity{
+    private String name;
 
-    private int type;
+    private int pic_url;
 
-    @Override
-    public int getItemType() {
-        return type;
+    public MyProduct(String name, int pic_url) {
+        this.name = name;
+        this.pic_url = pic_url;
     }
 
-    public int getType() {
-        return type;
+    public String getName() {
+        return name;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPic_url() {
+        return pic_url;
+    }
+
+    public void setPic_url(int pic_url) {
+        this.pic_url = pic_url;
     }
 }
