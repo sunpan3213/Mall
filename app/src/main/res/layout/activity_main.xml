@@ -7,15 +7,13 @@
     tools:context=".MainActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:background="@color/gray"
         android:id="@+id/rv_left"
         android:layout_width="0dp"
+        android:background="@color/divid"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
     </android.support.v7.widget.RecyclerView>
-
-    <View style="@style/v_divid"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_right"
