@@ -19,6 +19,7 @@ public class LeftAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
 
     @Override
     protected void convert(BaseViewHolder helper, String item) {
+
         if (selectPosition == helper.getLayoutPosition()){
             helper.setTextColor(R.id.tv,mContext.getResources().getColor(R.color.black));
         }else {

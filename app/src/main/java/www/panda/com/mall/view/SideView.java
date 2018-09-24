@@ -14,6 +14,7 @@ import android.widget.TextView;
 import www.panda.com.mall.R;
 
 public class SideView extends View {
+
     //触摸事件
     private OnTouchingLetterChangedListener onTouchingLetterChangedListener;
     //26个字母

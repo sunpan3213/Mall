@@ -14,6 +14,7 @@ import www.panda.com.mall.R;
 import www.panda.com.mall.entity.MyProduct;
 
 public class HeaderAdapter extends BaseQuickAdapter<MyProduct,BaseViewHolder> {
+
     public HeaderAdapter(int layoutResId, @Nullable List<MyProduct> data) {
         super(layoutResId, data);
     }
